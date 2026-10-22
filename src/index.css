@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #070D1E;
+    color: #FFFDF9;
+    font-family: 'Cinzel', Georgia, serif;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar for realm navigation */
+  ::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #091326;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #B45309;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F59E0B;
+  }
+}
+
+/* Greek Key / Meander border accent */
+.meander-border {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #FFD700 0px,
+    #FFD700 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+/* Smooth fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
